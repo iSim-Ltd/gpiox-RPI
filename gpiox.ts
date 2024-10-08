@@ -14,7 +14,11 @@
  * limitations under the License.
  **/
 
-"use strict";
+type NonEmptyArray<T> = [T, ...T[]];
+
+const thingy: NonEmptyArray<number> = [1];
+
+("use strict");
 type Enumerate<
   N extends number,
   Acc extends number[] = []
@@ -27,7 +31,7 @@ type IntRange<F extends number, T extends number> = Exclude<
   Enumerate<F>
 >;
 
-declare module "@isim/gpiox" {
+declare module "@isimnz/gpiox" {
   function error_test(): string;
   type pin = IntRange<2, 28>;
   type numOrBool = number | boolean;
