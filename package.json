@@ -2,7 +2,7 @@
   "name": "@isimnz/gpiox",
   "bugs": "https://github.com/iSim-Ltd/gpiox-RPI/issues",
   "description": "Raspberry Pi gpiox library - Now with TypeScript!\n Thank you so much to Derya Y.(AKA iiot2k) for creating the base javascript package",
-  "version": "2.1.11",
+  "version": "2.1.12",
   "type": "module",
   "license": "Apache-2.0",
   "author": {
