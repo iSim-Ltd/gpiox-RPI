@@ -1,5 +1,6 @@
 # @isimnz/gpiox
- ![monkasteer](https://github.com/user-attachments/assets/23268ed3-5e1f-42ca-b32a-d2394549f124)
+
+![monkasteer](https://github.com/user-attachments/assets/23268ed3-5e1f-42ca-b32a-d2394549f124)
 
 # Forked from @iiot2k/gpiox
 
@@ -10,18 +11,20 @@ Raspberry Pi gpiox library - Now with TypeScript Support 🎉
 Thank you so much to iiot2k for the great working implementing gpiox in node.js. Please support them with the link below
 <a href="https://www.buymeacoffee.com/iiot2ka" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-red.png" height="41" width="174"></a><br>
 
-
 ## Installation
+
 ```
 npm install @isimnz/gpiox
 ```
-or add in your ```package.json```:
+
+or add in your `package.json`:
 
 ```json
 "dependencies": {
     "@isimnz/gpiox": "latest"
 },
 ```
+
 [View on npm](https://www.npmjs.com/package/@isimnz/gpiox)📌<br>
 Original:
 [View on npm](https://www.npmjs.com/package/@iiot2k/gpiox)📌<br>
@@ -35,10 +38,12 @@ Original:
 [Report any functionality issues here](https://github.com/iiot2k/gpiox/issues)📌
 
 ## Detail
+
 - This library works on Raspberry Pi with 32bit or 64bit OS
 - Works also on Raspberry Pi 5
 
 ## Functions
+
 - Read/write/toggle/blink gpio
 - Watch gpio changes
 - PWM output
@@ -46,6 +51,7 @@ Original:
 - Reads temperature from sensors (DS18B20) connected on gpio
 
 ## Node.js API
+
 Node.js API functions are explained in document **API.md**<br>
 Node.js examples are on **examples** folder.<br>
 
@@ -58,12 +64,13 @@ const gpiox = require("@iiot2k/gpiox");
 gpiox.init_gpio(20, gpiox.GPIO_MODE_OUTPUT, 1);
 
 setTimeout(() => {
-    gpiox.set_gpio(20, 0);
-    gpiox.deinit_gpio(20);
+  gpiox.set_gpio(20, 0);
+  gpiox.deinit_gpio(20);
 }, 3000);
-
 ```
+
 ## C++ API
+
 This library uses C++ addon modules as interface to hardware.<br>
 Therefore, there is also a C++ interface to the drivers.<br>
 Unfortunately the C++ addon modules are not open source.<br>
