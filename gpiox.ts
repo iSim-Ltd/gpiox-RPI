@@ -45,7 +45,7 @@ declare module "@isimnz/gpiox" {
     MAX = 4294967294,
   }
   type counterRange = number;
-  enum GPIO_MODE {
+  const enum GPIO_MODE {
     INPUT_NOPULL,
     INPUT_PULLDOWN,
     INPUT_PULLUP,
@@ -62,7 +62,7 @@ declare module "@isimnz/gpiox" {
   function init_gpio(pin: pin, mode: GPIO_MODE, setval: numOrBool): boolean;
   function change_gpio(pin: pin, mode: GPIO_MODE, setval: numOrBool): boolean;
   function deinit_gpio(pin: pin): boolean;
-  enum GPIO_EDGE {
+  const enum GPIO_EDGE {
     RISING,
     FALLING,
     BOTH,
@@ -141,7 +141,7 @@ declare module "@isimnz/gpiox" {
   function get_counter_high(pin: pin): counterRange | undefined;
   function get_counter_mode(pin: pin): CNT_MODE | undefined;
   function is_counter_onlimit(pin: pin): boolState;
-  enum RES_SENSOR {
+  const enum RES_SENSOR {
     SENSOR_9,
     SENSOR_10,
     SENSOR_11,
