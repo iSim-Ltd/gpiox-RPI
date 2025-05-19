@@ -16,8 +16,6 @@
 
 type NonEmptyArray<T> = [T, ...T[]];
 
-const thingy: NonEmptyArray<number> = [1];
-
 ("use strict");
 type Enumerate<
   N extends number,
