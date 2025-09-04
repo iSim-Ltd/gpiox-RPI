@@ -29,8 +29,13 @@ jobs:
           yarn config set npmScopes.isimnz.npmAlwaysAuth true
           yarn config set npmScopes.isimnz.npmAuthToken ${{ secrets.NPM_TOKEN }}
 
+      - name: Move node plugins to dist
+        run: |
+          mv ./gpiox_arm32.node ./dist/gpiox_arm32.node
+          mv ./gpiox_arm64.node ./dist/gpiox_arm64.node
+
       - name: npm release
-        run: yarn npm publish --access public --tag latest 
+        run: yarn npm publish --access public --tag latest
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
